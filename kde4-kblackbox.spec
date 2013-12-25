@@ -5,7 +5,7 @@
 Summary:	A little logical game for KDE
 Summary(pl.UTF-8):	Prosta gra logiczna
 Summary(pt_BR.UTF-8):	Versão do jogo Blackbox do Emacs para KDE
-Name:		kde4-kblackbox
+Name:		kde4-%{orgname}
 Version:	4.12.0
 Release:	1
 License:	GPL
@@ -19,7 +19,7 @@ BuildRequires:	kde4-libkdegames-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.600
-Obsoletes:	kde4-kdegames-kblackbox
+Obsoletes:	kde4-kdegames-%{orgname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,7 +63,7 @@ install -d $RPM_BUILD_ROOT/var/games
 # remove locolor icons
 rm -rf $RPM_BUILD_ROOT%{_iconsdir}/locolor
 
-%find_lang kblackbox	--with-kde
+%find_lang %{orgname}	--with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %post			-p /sbin/ldconfig
 %postun			-p /sbin/ldconfig
 
-%files -f kblackbox.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kblackbox
 %{_desktopdir}/kde4/kblackbox.desktop
