@@ -6,12 +6,12 @@ Summary:	A little logical game for KDE
 Summary(pl.UTF-8):	Prosta gra logiczna
 Summary(pt_BR.UTF-8):	Versão do jogo Blackbox do Emacs para KDE
 Name:		kde4-%{orgname}
-Version:	4.12.0
+Version:	4.12.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	2531003a4d06e1305f70f42889c54683
+# Source0-md5:	df466dd6994c31089ade7715dda520bc
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
